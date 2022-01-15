@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All-Post</title>
+</head>
+<body>
+<h1>Your Posts are Here...</h1>
+{% for i in queryset %}
+  {{ i.user }} - {{ i.text }} - crated-On>> {{i.created_at}} - Updated-On>> {{i.updated_at}}
+{% endfor %}
+<h1><a href="{% url 'home' %}">Back</a></h1>
+</body>
+</html>

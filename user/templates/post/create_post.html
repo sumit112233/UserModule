@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+</head>
+<body>
+<form action="{% url 'post' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+
+</form>
+
+<h1><a href="{% url 'all-post' %}">See all Posts</a></h1>
+<h1><a href="{% url 'home' %}">Back</a></h1>
+</body>
+</html>
